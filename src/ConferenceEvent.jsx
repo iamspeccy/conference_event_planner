@@ -13,6 +13,7 @@ const ConferenceEvent = () => {
     const remainingAuditoriumQuantity = 3 - venueItems.find(item => item.name === "Auditorium Hall (Capacity:200)").quantity;
     const avItems = useSelector((state) => state.av);
     const avTotalCost = calculateTotalCost("av");
+    const mealsItems = useSelector((state) => state.meals);
 
     
     const handleToggleItems = () => {
@@ -184,7 +185,7 @@ const ConferenceEvent = () => {
                                 ))}
 
                                 </div>
-                                <div className="total_cost">Total Cost: </div>
+                                <div className="total_cost">Total Cost: {avTotalCost}</div>
 
                             </div>
 
